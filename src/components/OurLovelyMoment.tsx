@@ -64,7 +64,7 @@ export const OurLovelyMoment = () => {
         </div>
         <div className={"pt-1 md:pt-3"} onClick={() => setIndex(3)}>
           <img
-            className={"w-[32rem] h-[10rem] md:h-[36rem] lg:h-[40rem]"}
+            className={"w-[32rem] h-[10rem] md:h-[36rem] 2xl:h-[40rem]"}
             src={anh4}
             alt=""
           />
@@ -72,20 +72,20 @@ export const OurLovelyMoment = () => {
         <div className={"pt-1 md:pt-3 px-1 md:px-3"}>
           <img
             onClick={() => setIndex(4)}
-            className={"w-[32rem] h-[5rem] md:h-[18rem] lg:h-[20rem] pb-1"}
+            className={"w-[32rem] h-[5rem] md:h-[18rem] 2xl:h-[20rem] pb-1"}
             src={anh5}
             alt=""
           />
           <img
             onClick={() => setIndex(5)}
-            className={"w-[32rem] h-[5rem] md:h-[18rem] lg:h-[20rem]"}
+            className={"w-[32rem] h-[5rem] md:h-[18rem] 2xl:h-[20rem]"}
             src={anh6}
             alt=""
           />
         </div>
         <div className={"pt-1 md:pt-3"} onClick={() => setIndex(6)}>
           <img
-            className={"w-[32rem] h-[10rem] md:h-[36rem] lg:h-[40rem] pb-1"}
+            className={"w-[32rem] h-[10rem] md:h-[36rem] 2xl:h-[40rem] pb-1"}
             src={anh7}
             alt=""
           />
@@ -95,14 +95,14 @@ export const OurLovelyMoment = () => {
         <div className={"col-span-5"}>
           <div onClick={() => setIndex(7)}>
             <img
-              className={"w-full h-[5rem] md:h-[18rem] lg:h-[20rem]"}
+              className={"w-full h-[5rem] md:h-[18rem] 2xl:h-[20rem]"}
               src={anh8}
               alt=""
             />
           </div>
           <div className={"pt-1"} onClick={() => setIndex(9)}>
             <img
-              className={"w-full h-[5rem] md:h-[18rem] lg:h-[20rem]"}
+              className={"w-full h-[5rem] md:h-[18rem] 2xl:h-[20rem]"}
               src={anh10}
               alt=""
             />
@@ -111,7 +111,7 @@ export const OurLovelyMoment = () => {
         <div className={"col-span-7 pl-1"}>
           <div onClick={() => setIndex(8)}>
             <img
-              className={"w-full h-[7rem] md:h-[24rem] lg:h-[26rem]"}
+              className={"w-full h-[7rem] md:h-[24rem] 2xl:h-[26rem]"}
               src={anh9}
               alt=""
             />
@@ -119,14 +119,14 @@ export const OurLovelyMoment = () => {
           <div className={"grid grid-cols-2 pt-1"}>
             <div onClick={() => setIndex(10)}>
               <img
-                className={"w-full h-[3rem] md:h-[12rem] lg:h-[14rem]"}
+                className={"w-full h-[3rem] md:h-[12rem] 2xl:h-[14rem]"}
                 src={anh11}
                 alt=""
               />
             </div>
             <div className={"pl-1"} onClick={() => setIndex(11)}>
               <img
-                className={"w-full h-[3rem] md:h-[12rem] lg:h-[14rem]"}
+                className={"w-full h-[3rem] md:h-[12rem] 2xl:h-[14rem]"}
                 src={anh12}
                 alt=""
               />
