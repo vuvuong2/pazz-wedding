@@ -13,6 +13,10 @@ module.exports = {
         "light-pink": "#FFF7F9",
         "pink-red": "#F4486A",
       },
+      backgroundImage: {
+        heart: "url('/src/assets/heart-bg.png')",
+        footer: "url('/src/assets/footer.jpg')",
+      },
     },
   },
   plugins: [],

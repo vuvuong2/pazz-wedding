@@ -7,3 +7,9 @@
      font-family: 'Lovely Dream';
     src: local('Lovely Dream'), url('assets/fonts/lovely-dream.ttf') format('woff');
 }
+
+.ant-radio-wrapper .ant-radio-checked .ant-radio-inner{
+    border-color: #F4486A;
+    background: #F4486A;
+}
+

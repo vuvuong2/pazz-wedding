@@ -7,12 +7,23 @@ import { OurWedding } from "./components/OurWedding";
 import { OurLoveStory } from "./components/OurLoveStory";
 import { OurLovelyMoment } from "./components/OurLovelyMoment";
 import { RSVP } from "./components/RSVP";
+import { ConfigProvider, Divider } from "antd";
+import { BucketList } from "./components/BucketList";
+import { ContactUs } from "./components/ContactUs";
 
 export const WEDDING_DAY = new Date("2024-03-20");
 function App() {
   const dateDiff = differenceInDays(WEDDING_DAY, new Date());
   return (
-    <>
+    <ConfigProvider
+      theme={{
+        components: {
+          Radio: {
+            buttonCheckedBg: "#000000",
+          },
+        },
+      }}
+    >
       <div className="container py-5 mx-auto">
         <div className="flex justify-center mt-5 md:mt-10">
           <p
@@ -49,9 +60,13 @@ function App() {
         <div className="flex justify-center mt-10">
           <img src={wedPic} alt="" />
         </div>
-        <div>
+        <div className={"mb-10"}>
           <OurWedding />
         </div>
+        <div className={"mx-36"}>
+          <Divider style={{ borderBlockStart: "1px solid #F4486A" }} />
+        </div>
+
         <div>
           <OurLoveStory />
         </div>
@@ -61,8 +76,26 @@ function App() {
         <div>
           <RSVP />
         </div>
+        <div>
+          <BucketList />
+        </div>
+        <div>
+          <ContactUs />
+        </div>
       </div>
-    </>
+      <div className={"bg-footer bg-cover text-white  px-32 py-40 mt-16"}>
+        <div className={"text-center font-windsong text-6xl"}>Thank You</div>
+        <div className={"text-center font-garamond text-2xl mt-10"}>
+          Your presence means the world to us.
+          <br />
+          Thank you wholeheartedly for gracing our wedding with your company and
+          sharing in our happiness!
+        </div>
+        <div className={"text-center font-windsong text-3xl mt-10"}>
+          Spreading the word that we're soon to be married!
+        </div>
+      </div>
+    </ConfigProvider>
   );
 }
 

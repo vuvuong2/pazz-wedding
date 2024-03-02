@@ -60,13 +60,15 @@ export const OurWedding = () => {
       >
         <div
           className={
-            "border border-b bg-light-pink w-fit px-16 py-5 rounded-full text-2xl text-pink-red"
+            "bg-light-pink w-fit px-16 py-4 rounded-full text-2xl text-pink-red"
           }
         >
           RSVP
         </div>
       </div>
-      <div className={"mt-3 md:mt-5 text-center font-garamond text-xl"}>
+      <div
+        className={"mt-3 md:mt-5 text-center font-garamond text-xl lg:text-2xl"}
+      >
         Absolutely no gift compares to having your wonderful presence! <br></br>
         We really hope you'll be there to witness our happiness and share the
         joy with us!
