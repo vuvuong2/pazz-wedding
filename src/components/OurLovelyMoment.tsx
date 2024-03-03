@@ -14,7 +14,7 @@ import Lightbox from "yet-another-react-lightbox";
 import { useState } from "react";
 import "yet-another-react-lightbox/styles.css";
 
-export const OurLovelyMoment = () => {
+export const OurLovelyMoment = ({ lang }: { lang?: string }) => {
   const slides = [
     {
       src: anh1,
@@ -47,7 +47,9 @@ export const OurLovelyMoment = () => {
       </div>
       <div className={"text-center mt-10 md:mt-16"}>
         <div className={"font-bold text-2xl"}>
-          "The highest happiness on earth is the happiness of marriage"
+          {lang === "en"
+            ? `"The highest happiness on earth is the happiness of marriage"`
+            : `"Hạnh phúc lớn nhất trên trái đất là hạnh phúc của hôn nhân"`}
         </div>
         <div className={"text-2xl"}>William Lyon Phelps</div>
       </div>
@@ -64,7 +66,7 @@ export const OurLovelyMoment = () => {
         </div>
         <div className={"pt-1 md:pt-3"} onClick={() => setIndex(3)}>
           <img
-            className={"w-[32rem] h-[14rem] md:h-[30rem] 2xl:h-[40rem]"}
+            className={"w-[32rem] h-[14rem] md:h-[32rem] 2xl:h-[40rem]"}
             src={anh4}
             alt=""
           />
@@ -72,20 +74,20 @@ export const OurLovelyMoment = () => {
         <div className={"pt-1 md:pt-3 px-1 md:px-3"}>
           <img
             onClick={() => setIndex(4)}
-            className={"w-[32rem] h-[7rem] md:h-[15rem] 2xl:h-[20rem] pb-1"}
+            className={"w-[32rem] h-[7rem] md:h-[16rem] 2xl:h-[20rem] pb-1"}
             src={anh5}
             alt=""
           />
           <img
             onClick={() => setIndex(5)}
-            className={"w-[32rem] h-[7rem] md:h-[15rem] 2xl:h-[20rem]"}
+            className={"w-[32rem] h-[7rem] md:h-[16rem] 2xl:h-[20rem]"}
             src={anh6}
             alt=""
           />
         </div>
         <div className={"pt-1 md:pt-3"} onClick={() => setIndex(6)}>
           <img
-            className={"w-[32rem] h-[14rem] md:h-[30rem] 2xl:h-[40rem]"}
+            className={"w-[32rem] h-[14rem] md:h-[32rem] 2xl:h-[40rem]"}
             src={anh7}
             alt=""
           />

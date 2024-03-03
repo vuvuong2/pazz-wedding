@@ -14,7 +14,7 @@ module.exports = {
         "pink-red": "#F4486A",
       },
       backgroundImage: {
-        heart: "url('/src/assets/heart-bg.png')",
+        heart: "url('/src/assets/heart-bg.jpg')",
         footer: "url('/src/assets/footer.jpg')",
       },
     },

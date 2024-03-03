@@ -1,7 +1,14 @@
 import { useState } from "react";
 import bride from "../assets/bride.png";
 import groom from "../assets/groom.png";
-import { Input, Radio, RadioChangeEvent, Select } from "antd";
+import {
+  Input,
+  notification,
+  Radio,
+  RadioChangeEvent,
+  Select,
+  Spin,
+} from "antd";
 import TextArea from "antd/es/input/TextArea";
 import divider from "../assets/divider.png";
 import app from "../firebase.config";
@@ -12,25 +19,46 @@ const BRIDE_TYPE: number = 0;
 const GROOM_TYPE: number = 1;
 
 export const RSVP = () => {
+  const [api, contextHolder] = notification.useNotification();
   const [guestTypes, setGuestTypes] = useState(BRIDE_TYPE);
   const [seats, setSeats] = useState(1);
   const [name, setName] = useState("");
   const [isJoining, setIsJoining] = useState(true);
   const [songRequest, setSongRequest] = useState("");
   const [wish, setWish] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
   const db = getFirestore(app);
 
   const submit = async () => {
+    if (!name) {
+      setError("Name is required");
+      return;
+    }
     const id = uuidv4();
-    await setDoc(doc(db, "rsvp", id), {
-      guestTypes,
-      name,
-      seats: isJoining ? seats : 0,
-      isJoining,
-      songRequest,
-      wish,
-    });
+    try {
+      setLoading(true);
+      await setDoc(doc(db, "rsvp", id), {
+        guestTypes,
+        name,
+        seats: isJoining ? seats : 0,
+        isJoining,
+        songRequest,
+        wish,
+      });
+      setLoading(false);
+      api["success"]({
+        message: "Thank you for your RSVP!",
+        description: "We're looking forward to seeing you at our wedding",
+      });
+    } catch (e) {
+      api["error"]({
+        message: "Something went wrong",
+        description: "Please try again",
+      });
+      setLoading(false);
+    }
   };
 
   const onChange = (e: RadioChangeEvent) => {
@@ -38,6 +66,8 @@ export const RSVP = () => {
   };
   return (
     <div className={"mt-10 md:mt-36 font-garamond"}>
+      {contextHolder}
+      <Spin spinning={loading} fullscreen />
       <div
         className={
           "text-pink-red text-xl md:text-5xl text-center font-lovelydream"
@@ -94,7 +124,11 @@ export const RSVP = () => {
       </div>
       <div className={"mt-5 md:mt-10 mx-16 md:mx-32"}>
         <div className={"flex flex-row"}>
-          <div className={"basis-1/5 pl-8 font-bold text-xl"}>Your Name</div>
+          <div className={"basis-1/5 pl-8 font-bold text-xl"}>
+            <span>Your Name</span>
+
+            {error && <div className={"text-red-700 text-sm"}>{error}</div>}
+          </div>
           <div className={"basis-4/5"}>
             <Input
               required
