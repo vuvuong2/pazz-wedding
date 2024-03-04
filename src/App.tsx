@@ -190,26 +190,10 @@ function App() {
           <OurWedding lang={lang} />
         </div>
 
-        <div
-          className={
-            refLoveStoryInView
-              ? `scale-100 transition duration-1000`
-              : `scale-90 transition duration-1000`
-          }
-          id={"loveStory"}
-          ref={refLoveStory}
-        >
+        <div id={"loveStory"} ref={refLoveStory}>
           <OurLoveStory lang={lang} />
         </div>
-        <div
-          className={
-            refPhotoInView
-              ? `scale-100 transition duration-1000`
-              : `scale-75 transition duration-1000`
-          }
-          id={"photo"}
-          ref={refPhoto}
-        >
+        <div id={"photo"} ref={refPhoto}>
           <OurLovelyMoment lang={lang} />
         </div>
         {lang === "en" && (
