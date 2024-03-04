@@ -85,7 +85,9 @@ function App() {
           )}
         </div>
       </div>
-      <div className={"bg-light-pink px-5 md:px-10 py-3 md:py-6 sticky top-0"}>
+      <div
+        className={"bg-light-pink px-5 md:px-10 py-3 md:py-6 sticky z-50 top-0"}
+      >
         {lang === "en" && (
           <div className="flex flex-row text-center font-garamond text-md md:text-xl">
             <div
@@ -102,7 +104,7 @@ function App() {
                   : "basis-1/5"
               }
             >
-              Our Love Story
+              <a href={"#loveStory"}>Our Love Story</a>
             </div>
             <div
               className={
@@ -111,7 +113,7 @@ function App() {
                   : "basis-1/5"
               }
             >
-              Photo Gallery
+              <a href={"#photo"}>Photo Gallery</a>
             </div>
             <div
               className={
@@ -120,7 +122,7 @@ function App() {
                   : "basis-1/5"
               }
             >
-              RSVP
+              <a href={"#rsvp"}>RSVP</a>
             </div>
             <div
               className={
@@ -129,7 +131,7 @@ function App() {
                   : "basis-1/5"
               }
             >
-              Marriage Blessings
+              <a href={"#bless"}>Marriage Blessings</a>
             </div>
           </div>
         )}
@@ -140,7 +142,7 @@ function App() {
                 refWeddingInView ? "basis-1/5 text-pink-red" : "basis-1/5"
               }
             >
-              Thiệp cưới
+              <a href={"#wedding"}>Thiệp cưới</a>
             </div>
             <div
               className={
@@ -149,7 +151,7 @@ function App() {
                   : "basis-1/5"
               }
             >
-              Câu chuyên tình yêu
+              <a href={"#loveStory"}>Câu chuyên tình yêu</a>
             </div>
             <div
               className={
@@ -158,14 +160,20 @@ function App() {
                   : "basis-1/5"
               }
             >
-              Thư viện ảnh
+              <a href={"#photo"}>Thư viện ảnh</a>
             </div>
             <div
-              className={refMBInView ? "basis-1/5 text-pink-red" : "basis-1/5"}
+              className={
+                refMBInView && !refPhotoInView
+                  ? "basis-1/5 text-pink-red"
+                  : "basis-1/5"
+              }
             >
-              Lời chúc
+              <a href={"#bless"}>Lời chúc</a>
             </div>
-            <div className={"basis-1/5"}>Liên hệ</div>
+            <div className={"basis-1/5"}>
+              <a href={"#contact"}>Liên hệ</a>
+            </div>
           </div>
         )}
       </div>
@@ -173,21 +181,45 @@ function App() {
         <div className="flex justify-center mt-10">
           <img src={wedPic} alt="" />
         </div>
-        <div id={"wedding"} className={"mb-10"} ref={refWedding}>
+        <div
+          id={"wedding"}
+          className={
+            refWeddingInView
+              ? "transition duration-1000 scale-100 mb-10"
+              : "transition duration-1000 scale-75 mb-10"
+          }
+          ref={refWedding}
+        >
           <OurWedding lang={lang} />
         </div>
         <div className={"mx-36"}>
           <Divider style={{ borderBlockStart: "1px solid #F4486A" }} />
         </div>
 
-        <div ref={refLoveStory}>
+        <div
+          id={"loveStory"}
+          ref={refLoveStory}
+          className={
+            refLoveStoryInView
+              ? "transition duration-1000 scale-100"
+              : "transition duration-1000 scale-75"
+          }
+        >
           <OurLoveStory lang={lang} />
         </div>
-        <div ref={refPhoto}>
+        <div
+          id={"photo"}
+          ref={refPhoto}
+          className={
+            refPhotoInView
+              ? "transition duration-1000 skew-x-0"
+              : "transition duration-1000 skew-x-12"
+          }
+        >
           <OurLovelyMoment lang={lang} />
         </div>
         {lang === "en" && (
-          <div ref={refRSVP}>
+          <div id={"rsvp"} ref={refRSVP}>
             <RSVP />
           </div>
         )}
@@ -200,10 +232,10 @@ function App() {
         <div className={"flex justify-center py-20 mt-10"}>
           <img src={dvdheart} alt={"divider"} />
         </div>
-        <div ref={refMB}>
+        <div id={"bless"} ref={refMB}>
           <MarriageBlessing lang={lang}></MarriageBlessing>
         </div>
-        <div>
+        <div id={"contact"}>
           <ContactUs lang={lang} />
         </div>
       </div>

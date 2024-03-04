@@ -4,7 +4,7 @@ import dish from "../assets/dish.png";
 import marriage from "../assets/marriage.png";
 export const OurWedding = ({ lang }: { lang?: string }) => {
   return (
-    <div className={"mt-16 md:mt-28"}>
+    <div className={"mt-16 md:mt-28 mx-5 lg:mx-20"}>
       <div
         className={
           "text-pink-red text-xl md:text-5xl text-center font-lovelydream"
@@ -46,7 +46,7 @@ tới dự bữa tiệc thân mật mừng đám cưới cùng gia đình chúng
           "px-5 md:px-8 mx-2 md:mx-32 mt-5 md:mt-10 text-center grid grid-cols-2 font-garamond text-xl md:text-2xl"
         }
       >
-        <div className={"mt-4"}>
+        <div className={"mt-6 md:mt-4"}>
           <div>11.00 AM</div>
           <div className={"flex justify-center my-3"}>
             <img src={camera} alt={"camera"} />
@@ -100,12 +100,16 @@ tới dự bữa tiệc thân mật mừng đám cưới cùng gia đình chúng
         <div className={"font-garamond mt-10"}>
           <div className={"grid grid-cols-1 md:grid-cols-2 gap-3"}>
             <div className={"col-span-1 text-center"}>
-              <div className={"font-bold text-2xl mt-2"}>Nhà Trai</div>
-              <div className={"font-bold text-3xl mt-2"}>
+              <div className={"font-bold text-xl lg:text-2xl mt-2"}>
+                Nhà Trai
+              </div>
+              <div className={"font-bold text-2xl lg:text-3xl mt-2"}>
                 Ông VƯƠNG DƯƠNG MINH
               </div>
-              <div className={"font-bold text-3xl"}>Bà NGUYỄN QUẾ TRANG</div>
-              <div className={"mt-4 text-2xl font-medium"}>
+              <div className={"font-bold text-2xl lg:text-3xl"}>
+                Bà NGUYỄN QUẾ TRANG
+              </div>
+              <div className={"mt-4 text-xl lg:text-2xl font-medium"}>
                 <div>Lễ Thành Hôn được tổ chức vào lúc</div>
                 <div className={"text-pink-red"}>
                   9h05 - Ngày 20 tháng 3 năm 2024
@@ -115,12 +119,16 @@ tới dự bữa tiệc thân mật mừng đám cưới cùng gia đình chúng
               </div>
             </div>
             <div className={"col-span-1 text-center"}>
-              <div className={"font-bold text-2xl mt-2"}>Nhà Gái</div>
-              <div className={"font-bold text-3xl mt-2"}>
+              <div className={"font-bold text-xl lg:text-2xl mt-2"}>
+                Nhà Gái
+              </div>
+              <div className={"font-bold text-2xl lg:text-3xl mt-2"}>
                 Ông NGUYỄN THÀNH LONG
               </div>
-              <div className={"font-bold text-3xl"}>Bà ĐỖ THU HƯỜNG</div>
-              <div className={"mt-4 text-2xl font-medium"}>
+              <div className={"font-bold text-2xl lg:text-3xll"}>
+                Bà ĐỖ THU HƯỜNG
+              </div>
+              <div className={"mt-4 text-xl lg:text-2xl font-medium"}>
                 <div>Lễ Vu Quy được tổ chức vào lúc</div>
                 <div className={"text-pink-red"}>
                   8h00 - Ngày 20 tháng 3 năm 2024
@@ -135,7 +143,11 @@ tới dự bữa tiệc thân mật mừng đám cưới cùng gia đình chúng
         </div>
       )}
       {lang === "vi" && (
-        <div className={"text-center mt-10 md:mt-16 mb-20 text-2xl"}>
+        <div
+          className={
+            "text-center mt-10 md:mt-16 mb-20 text-xl lg:text-2xl font-garamond"
+          }
+        >
           Sự hiện diện của quý khách là niềm vinh hạnh của gia đình chúng tôi.
           Rất hân hạnh được đón tiếp!
         </div>
