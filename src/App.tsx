@@ -131,7 +131,7 @@ function App() {
                   : "basis-1/5"
               }
             >
-              <a href={"#bless"}>Marriage Blessings</a>
+              <a href={"#bless"}>Wedding Wishes</a>
             </div>
           </div>
         )}
@@ -139,7 +139,7 @@ function App() {
           <div className="flex flex-row text-center font-garamond text-md md:text-xl">
             <div
               className={
-                refWeddingInView ? "basis-1/5 text-pink-red" : "basis-1/5"
+                refWeddingInView ? "basis-1/4 text-pink-red" : "basis-1/4"
               }
             >
               <a href={"#wedding"}>Thiệp cưới</a>
@@ -147,17 +147,17 @@ function App() {
             <div
               className={
                 refLoveStoryInView && !refWeddingInView
-                  ? "basis-1/5 text-pink-red"
-                  : "basis-1/5"
+                  ? "basis-1/4 text-pink-red"
+                  : "basis-1/4"
               }
             >
-              <a href={"#loveStory"}>Câu chuyên tình yêu</a>
+              <a href={"#loveStory"}>Câu chuyện tình yêu</a>
             </div>
             <div
               className={
                 refPhotoInView && !refLoveStoryInView
-                  ? "basis-1/5 text-pink-red"
-                  : "basis-1/5"
+                  ? "basis-1/4 text-pink-red"
+                  : "basis-1/4"
               }
             >
               <a href={"#photo"}>Thư viện ảnh</a>
@@ -165,14 +165,11 @@ function App() {
             <div
               className={
                 refMBInView && !refPhotoInView
-                  ? "basis-1/5 text-pink-red"
-                  : "basis-1/5"
+                  ? "basis-1/4 text-pink-red"
+                  : "basis-1/4"
               }
             >
               <a href={"#bless"}>Lời chúc</a>
-            </div>
-            <div className={"basis-1/5"}>
-              <a href={"#contact"}>Liên hệ</a>
             </div>
           </div>
         )}
@@ -182,39 +179,36 @@ function App() {
           <img src={wedPic} alt="" />
         </div>
         <div
-          id={"wedding"}
           className={
             refWeddingInView
-              ? "transition duration-1000 scale-100 mb-10"
-              : "transition duration-1000 scale-75 mb-10"
+              ? `scale-100 transition duration-1000`
+              : `scale-90 transition duration-1000`
           }
+          id={"wedding"}
           ref={refWedding}
         >
           <OurWedding lang={lang} />
         </div>
-        <div className={"mx-36"}>
-          <Divider style={{ borderBlockStart: "1px solid #F4486A" }} />
-        </div>
 
         <div
-          id={"loveStory"}
-          ref={refLoveStory}
           className={
             refLoveStoryInView
-              ? "transition duration-1000 scale-100"
-              : "transition duration-1000 scale-75"
+              ? `scale-100 transition duration-1000`
+              : `scale-90 transition duration-1000`
           }
+          id={"loveStory"}
+          ref={refLoveStory}
         >
           <OurLoveStory lang={lang} />
         </div>
         <div
-          id={"photo"}
-          ref={refPhoto}
           className={
             refPhotoInView
-              ? "transition duration-1000 skew-x-0"
-              : "transition duration-1000 skew-x-12"
+              ? `scale-100 transition duration-1000`
+              : `scale-75 transition duration-1000`
           }
+          id={"photo"}
+          ref={refPhoto}
         >
           <OurLovelyMoment lang={lang} />
         </div>
@@ -229,7 +223,7 @@ function App() {
           </div>
         )}
 
-        <div className={"flex justify-center py-20 mt-10"}>
+        <div className={"flex justify-center py-10 mt-10 mx-5"}>
           <img src={dvdheart} alt={"divider"} />
         </div>
         <div id={"bless"} ref={refMB}>
@@ -239,12 +233,18 @@ function App() {
           <ContactUs lang={lang} />
         </div>
       </div>
-      <div className={"bg-footer bg-cover text-white  px-32 py-40 mt-16"}>
+      <div
+        className={
+          "bg-footer bg-cover bg-center text-white px-5 lg:px-32 py-40 mt-16"
+        }
+      >
         <div className={"text-center font-windsong text-6xl"}>
           {lang === "en" ? `Thank You` : `Xin chân thành cảm ơn!`}
         </div>
         {lang === "en" && (
-          <div className={"text-center font-garamond text-2xl mt-10"}>
+          <div
+            className={"text-center font-garamond text-xl lg:text-2xl mt-10"}
+          >
             Your presence means the world to us.
             <br />
             Thank you wholeheartedly for gracing our wedding with your company
@@ -252,7 +252,9 @@ function App() {
           </div>
         )}
         {lang === "vi" && (
-          <div className={"text-center font-garamond text-2xl mt-10"}>
+          <div
+            className={"text-center font-garamond text-xl lg:text-2xl mt-10"}
+          >
             Đám cưới của chúng tôi chắc chắn sẽ kém vui đi rất nhiều nếu thiếu
             đi sự hiện diện của bạn.
             <br />

@@ -65,7 +65,7 @@ export const RSVP = () => {
     setIsJoining(e.target.value);
   };
   return (
-    <div className={"mt-10 md:mt-36 font-garamond"}>
+    <div className={"mt-24 md:mt-36 font-garamond"}>
       {contextHolder}
       <Spin spinning={loading} fullscreen />
       <div
@@ -76,7 +76,7 @@ export const RSVP = () => {
         RSVP
       </div>
 
-      <div className={"text-center mt-10 md:mt-16 text-xl"}>
+      <div className={"text-center mt-10 md:mt-16 text-xl mx-10"}>
         Please respond by 10 March 2024 to confirm your attendance at our event,
         allowing us to better arrange seating for you.
       </div>
@@ -122,14 +122,14 @@ export const RSVP = () => {
           </div>
         </div>
       </div>
-      <div className={"mt-5 md:mt-10 mx-16 md:mx-32"}>
-        <div className={"flex flex-row"}>
-          <div className={"basis-1/5 pl-8 font-bold text-xl"}>
+      <div className={"mt-5 md:mt-10 mx-6 md:mx-32"}>
+        <div className={"lg:flex lg:flex-row"}>
+          <div className={"lg:basis-1/5 lg:pl-8 font-bold text-xl"}>
             <span>Your Name</span>
 
             {error && <div className={"text-red-700 text-sm"}>{error}</div>}
           </div>
-          <div className={"basis-4/5"}>
+          <div className={"lg:basis-4/5"}>
             <Input
               required
               onChange={(e) => {
@@ -138,11 +138,11 @@ export const RSVP = () => {
             ></Input>
           </div>
         </div>
-        <div className={"flex flex-row mt-5"}>
-          <div className={"basis-3/5 pl-8 font-bold text-xl"}>
+        <div className={"lg:flex lg:flex-row mt-5"}>
+          <div className={"lg:basis-3/5 lg:pl-8 font-bold text-xl"}>
             Will you be joining us at our wedding? ᵔ ᵕ ᵔ
           </div>
-          <div className={"basis-2/5"}>
+          <div className={"lg:basis-2/5"}>
             <Radio.Group onChange={onChange} value={isJoining}>
               <div>
                 <Radio value={true} className={"text-lg font-garamond"}>
@@ -158,11 +158,11 @@ export const RSVP = () => {
           </div>
         </div>
         {isJoining && (
-          <div className={"flex flex-row mt-5"}>
-            <div className={"basis-1/2 pl-8 font-bold text-xl"}>
+          <div className={"lg:flex lg:flex-row mt-5"}>
+            <div className={"lg:basis-1/2 lg:pl-8 font-bold text-xl"}>
               Number of seat(s) reserved
             </div>
-            <div className={"basis-1/2"}>
+            <div className={"lg:basis-1/2"}>
               <Select
                 style={{ width: "100%" }}
                 defaultValue={seats}
@@ -191,21 +191,21 @@ export const RSVP = () => {
             </div>
           </div>
         )}
-        <div className={"flex flex-row mt-5"}>
-          <div className={"basis-1/2 pl-8 font-bold text-lg"}>
+        <div className={"lg:flex lg:flex-row mt-5"}>
+          <div className={"lg:basis-1/2 lg:pl-8 font-bold text-lg"}>
             <div className={"font-bold text-xl"}>Song request? ♫⋆｡♪ ₊˚♬ ﾟ.</div>
             <div className={"font-light text-md"}>
               Any songs you would like to appear in our wedding. Please let us
               know so that we can play it.
             </div>
           </div>
-          <div className={"basis-1/2"}>
+          <div className={"lg:basis-1/2"}>
             <TextArea
               onChange={(e) => setSongRequest(e.target.value)}
             ></TextArea>
           </div>
         </div>
-        <div className={"pl-8 mt-5"}>
+        <div className={"lg:pl-8 mt-5"}>
           <div className={"font-bold text-xl mb-5"}>
             Any love words/ messages to us? ⸜(｡˃ ᵕ ˂ )⸝♡
           </div>
@@ -218,7 +218,7 @@ export const RSVP = () => {
         <div className={"flex justify-center mt-10"}>
           <button
             className={
-              "bg-light-pink px-16 py-4 rounded-full text-2xl text-pink-red"
+              "bg-light-pink px-16 py-4 rounded-full font-bold text-2xl text-pink-red"
             }
             onClick={submit}
           >

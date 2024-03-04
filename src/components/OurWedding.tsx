@@ -17,7 +17,7 @@ export const OurWedding = ({ lang }: { lang?: string }) => {
       </div>
       <div
         className={
-          "font-garamond font-bold text-center text-2xl md:text-4xl mt-10"
+          "font-garamond font-bold text-center text-xl md:text-4xl mt-10"
         }
       >
         {lang === "en"
@@ -38,8 +38,13 @@ tới dự bữa tiệc thân mật mừng đám cưới cùng gia đình chúng
         }
       >
         {lang === "en"
-          ? `at Long Vi Wedding Palace - 3A Dao Duy Anh, Dong Da, Ha Noi`
-          : `tại Long Vĩ Palace - Sảnh Crystal - Tầng 2 3A Đào Duy Anh - Đống Đa - Hà Nội`}
+          ? `at Long Vi Wedding Palace - 2nd Floor`
+          : `tại Long Vĩ Palace - Sảnh Crystal - Tầng 2`}
+      </div>
+      <div className={"font-garamond text-xl md:text-4xl text-center mt-1"}>
+        {lang === "en"
+          ? `3A Dao Duy Anh, Dong Da, Ha Noi`
+          : `3A Đào Duy Anh - Đống Đa - Hà Nội`}
       </div>
       <div
         className={
@@ -52,20 +57,16 @@ tới dự bữa tiệc thân mật mừng đám cưới cùng gia đình chúng
             <img src={camera} alt={"camera"} />
           </div>
 
-          <div>
-            {lang === "en"
-              ? `Guest Reception & Photo Time`
-              : "Đón khách & chụp ảnh"}
-          </div>
+          <div>{lang === "en" ? `Guest Reception &` : "Đón khách &"}</div>
+          <div>{lang === "en" ? `Photo Time` : "chụp ảnh"}</div>
         </div>
         <div className={"mt-6 md:mt-4"}>
           <div>11.30 AM</div>
           <div className={"flex justify-center my-3"}>
             <img src={marriage} alt="" />
           </div>
-          <div>
-            {lang === "en" ? `Ceremony & Lunch` : `Nghi lễ & khai tiệc`}
-          </div>
+          <div>{lang === "en" ? `Ceremony &` : `Nghi lễ &`}</div>
+          <div>{lang === "en" ? `Lunch` : `khai tiệc`}</div>
         </div>
       </div>
       {lang === "en" && (
@@ -76,10 +77,10 @@ tới dự bữa tiệc thân mật mừng đám cưới cùng gia đình chúng
         >
           <div
             className={
-              "bg-light-pink w-fit px-16 py-4 rounded-full text-2xl text-pink-red"
+              "bg-light-pink font-bold w-fit px-16 py-4 rounded-full text-2xl text-pink-red cursor-pointer"
             }
           >
-            RSVP
+            <a href={"#rsvp"}>RSVP</a>
           </div>
         </div>
       )}

@@ -37,21 +37,21 @@ export const OurLovelyMoment = ({ lang }: { lang?: string }) => {
   ];
   const [index, setIndex] = useState(-1);
   return (
-    <div className={"mt-10 md:mt-36 font-garamond"}>
+    <div className={"mt-24 md:mt-36 font-garamond"}>
       <div
         className={
           "text-pink-red text-xl md:text-5xl text-center font-lovelydream"
         }
       >
-        Our Lovely Moment
+        Our Lovely Moments
       </div>
-      <div className={"text-center mt-10 md:mt-16"}>
-        <div className={"font-bold text-2xl"}>
+      <div className={"text-center mt-10 md:mt-16 mx-10"}>
+        <div className={"font-bold text-xl md:text-2xl"}>
           {lang === "en"
             ? `"The highest happiness on earth is the happiness of marriage"`
             : `"Hạnh phúc lớn nhất trên trái đất là hạnh phúc của hôn nhân"`}
         </div>
-        <div className={"text-2xl"}>William Lyon Phelps</div>
+        <div className={"text-xl md:text-2xl"}>William Lyon Phelps</div>
       </div>
 
       <div className={"grid grid-cols-3 mt-10 md:mt-16 text-xl md:mx-16"}>
@@ -66,7 +66,9 @@ export const OurLovelyMoment = ({ lang }: { lang?: string }) => {
         </div>
         <div className={"pt-1 md:pt-3"} onClick={() => setIndex(3)}>
           <img
-            className={"w-[32rem] h-[14rem] md:h-[32rem] 2xl:h-[40rem]"}
+            className={
+              "w-[32rem] h-[14rem] md:h-[24rem] lg:h-[32rem] 2xl:h-[40rem]"
+            }
             src={anh4}
             alt=""
           />
@@ -74,20 +76,26 @@ export const OurLovelyMoment = ({ lang }: { lang?: string }) => {
         <div className={"pt-1 md:pt-3 px-1 md:px-3"}>
           <img
             onClick={() => setIndex(4)}
-            className={"w-[32rem] h-[7rem] md:h-[16rem] 2xl:h-[20rem] pb-1"}
+            className={
+              "w-[32rem] h-[7rem] md:h-[12rem] lg:h-[16rem] 2xl:h-[20rem] pb-1"
+            }
             src={anh5}
             alt=""
           />
           <img
             onClick={() => setIndex(5)}
-            className={"w-[32rem] h-[7rem] md:h-[16rem] 2xl:h-[20rem]"}
+            className={
+              "w-[32rem] h-[7rem] md:h-[12rem] lg:h-[16rem] 2xl:h-[20rem]"
+            }
             src={anh6}
             alt=""
           />
         </div>
         <div className={"pt-1 md:pt-3"} onClick={() => setIndex(6)}>
           <img
-            className={"w-[32rem] h-[14rem] md:h-[32rem] 2xl:h-[40rem]"}
+            className={
+              "w-[32rem] h-[14rem] md:h-[24rem] lg:h-[32rem] 2xl:h-[40rem]"
+            }
             src={anh7}
             alt=""
           />
@@ -97,14 +105,18 @@ export const OurLovelyMoment = ({ lang }: { lang?: string }) => {
         <div className={"col-span-5"}>
           <div onClick={() => setIndex(7)}>
             <img
-              className={"w-full h-[7rem] md:h-[20rem] 2xl:h-[20rem]"}
+              className={
+                "w-full h-[7rem] md:h-[12rem] lg:h-[20rem] 2xl:h-[20rem]"
+              }
               src={anh8}
               alt=""
             />
           </div>
           <div className={"pt-1"} onClick={() => setIndex(9)}>
             <img
-              className={"w-full h-[7rem] md:h-[20rem] 2xl:h-[20rem]"}
+              className={
+                "w-full h-[7rem] md:h-[12rem] lg:h-[20rem] 2xl:h-[20rem]"
+              }
               src={anh10}
               alt=""
             />
@@ -113,7 +125,9 @@ export const OurLovelyMoment = ({ lang }: { lang?: string }) => {
         <div className={"col-span-7 pl-1"}>
           <div onClick={() => setIndex(8)}>
             <img
-              className={"w-full h-[10rem] md:h-[26rem] 2xl:h-[26rem]"}
+              className={
+                "w-full h-[10rem] md:h-[16rem] lg:h-[26rem] 2xl:h-[26rem]"
+              }
               src={anh9}
               alt=""
             />
@@ -121,14 +135,18 @@ export const OurLovelyMoment = ({ lang }: { lang?: string }) => {
           <div className={"grid grid-cols-2 pt-1"}>
             <div onClick={() => setIndex(10)}>
               <img
-                className={"w-full h-[4rem] md:h-[14rem] 2xl:h-[14rem]"}
+                className={
+                  "w-full h-[4rem] md:h-[8rem] lg:h-[14rem] 2xl:h-[14rem]"
+                }
                 src={anh11}
                 alt=""
               />
             </div>
             <div className={"pl-1"} onClick={() => setIndex(11)}>
               <img
-                className={"w-full h-[4rem] md:h-[14rem] 2xl:h-[14rem]"}
+                className={
+                  "w-full h-[4rem] md:h-[8rem] lg:h-[14rem] 2xl:h-[14rem]"
+                }
                 src={anh12}
                 alt=""
               />

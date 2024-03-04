@@ -38,25 +38,32 @@ export const BucketList = () => {
       >
         Newlywed Bucket List
       </div>
-      <div className={"mt-16 font-garamond font-bold text-2xl text-center"}>
+      <div
+        className={"mt-16 font-garamond font-bold text-2xl text-center mx-10"}
+      >
         Any ideas for our next adventure post-wedding? (´｡• ◡ •｡`) ♡ˎˊ˗ We're
         all ears!
       </div>
-      <div className={"mt-8 front-garamond text-xl text-center"}>
+      <div className={"mt-8 font-garamond text-xl text-center mx-10"}>
         We'd love to hear your suggestions on what we should do together to
         sprinkle some extra romance into our newlywed journey.
       </div>
-      {error && <div className={"text-red-500 text-center mt-4"}>{error}</div>}
-      <div className={"mt-8 mx-24 text-center"}>
+      {error && (
+        <div className={"font-garamond text-red-500 text-center mt-4"}>
+          {error}
+        </div>
+      )}
+      <div className={"mt-8 mx-10 lg:mx-24 text-center"}>
         <TextArea
           size={"large"}
+          rows={8}
           onChange={(e) => setBucket(e.target.value)}
         ></TextArea>
       </div>
-      <div className={"flex justify-center mt-10"}>
+      <div className={"flex font-garamond justify-center mt-10"}>
         <button
           className={
-            "bg-light-pink px-16 py-4 rounded-full text-2xl text-pink-red cursor-pointer"
+            "bg-light-pink font-bold px-16 py-4 rounded-full text-2xl text-pink-red cursor-pointer"
           }
           onClick={submit}
         >

@@ -3,7 +3,7 @@ import p2023 from "../assets/2023.png";
 import p2024 from "../assets/2024.png";
 export const OurLoveStory = ({ lang }: { lang?: string }) => {
   return (
-    <div className={"mt-10 md:mt-36 font-garamond"}>
+    <div className={"mt-28 md:mt-36 font-garamond"}>
       <div
         className={
           "text-pink-red text-xl md:text-5xl text-center font-lovelydream"
@@ -11,13 +11,13 @@ export const OurLoveStory = ({ lang }: { lang?: string }) => {
       >
         Our Love Story
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 bg-center bg-heart gap-12 mt-16 py-24">
+      <div className="grid grid-cols-1 md:grid-cols-3 mx-10 bg-center bg-cover bg-heart gap-12  md:mt-5  md:py-16">
         <div className={"col-span-1"}>
           <div className={"mx-6 py-5"}>
             <img src={p2020} alt={"2020"} />
           </div>
           <div className={"font-windsong text-3xl text-center text-pink-red"}>
-            {lang === "en" ? `It’s all started...` : `Tình yêu bắt đầu`}
+            {lang === "en" ? `It all started...` : `Tình yêu bắt đầu`}
           </div>
           {lang === "en" && (
             <div className={"text-center text-xl font-garamond mt-5"}>
@@ -77,7 +77,7 @@ export const OurLoveStory = ({ lang }: { lang?: string }) => {
           )}
         </div>
         <div className={"col-span-1"}>
-          <div className={"mx-6 pt-12 pb-12"}>
+          <div className={"mx-6 py-5"}>
             <img src={p2024} alt={"2023"} />
           </div>
           <div className={"font-windsong text-3xl text-center text-pink-red"}>
