@@ -86,11 +86,7 @@ tới dự bữa tiệc thân mật mừng đám cưới cùng gia đình chúng
       )}
 
       {lang === "en" && (
-        <div
-          className={
-            "mt-3 md:mt-5 text-center font-garamond text-xl lg:text-2xl"
-          }
-        >
+        <div className={"mt-3 md:mt-5 text-center font-garamond text-xl"}>
           Absolutely no gift compares to having your wonderful presence!{" "}
           <br></br>
           We really hope you'll be there to witness our happiness and share the

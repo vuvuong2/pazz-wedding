@@ -8,11 +8,7 @@ export const ContactUs = ({ lang }: { lang: string }) => {
       >
         Contact Us
       </div>
-      <div
-        className={
-          "mt-8 lg:mt-16 font-garamond mx-10 text-xl lg:text-2xl text-center"
-        }
-      >
+      <div className={"mt-8 lg:mt-16 font-garamond mx-10 text-xl text-center"}>
         {lang === "en"
           ? `If you've got questions, concerns or any lovely messages, feel free to
         shoot us an email at anytime to `
